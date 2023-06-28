@@ -4,20 +4,16 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
+const Blog = require('./models/blog')
 
-const blogSchema = mongoose.Schema({
-  title: String,
-  author: String,
-  url: String,
-  likes: Number
-})
 
-const Blog = mongoose.model('Blog', blogSchema)
 
-const mongoUrl = 'mongodb://localhost/bloglist'
+
+
+const mongoUrl = process.env.MONGODB_URI
 console.log(`connecting to ${mongoUrl}`)
 mongoose.connect(mongoUrl)
-    .then(() => console.log('successful connection'))
+    .then(() => console.log('successful connection to', mongoUrl))
     .catch(() => console.log('error connecting to database'))
 
 app.use(cors())
@@ -38,6 +34,9 @@ app.post('/api/blogs', (request, response) => {
     .save()
     .then(result => {
       response.status(201).json(result)
+    })
+    .catch(error => {
+      response.json({error: error.message})
     })
 })
 
