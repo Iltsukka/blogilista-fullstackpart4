@@ -73,6 +73,32 @@ test('if no likes property, shows default likes as 0', async () => {
     expect(response.body[initialBlogs.length].likes).toBe(0)
 })
 
+test('if no title given, response is 400 Bad Request', async () => {
+    const blog = {
+        author: "Kim Jong",
+        url: "www.ABBA.com/dancing",
+        likes: 44
+    }
+
+    await api
+      .post('/api/blogs')
+      .send(blog)
+      .expect(400)
+})
+
+test('if no url given, response is 400 Bad Request', async () => {
+    const blog = {
+        title: "Review of Indiana Jones",
+        author: "Kim Jong",
+        likes: 51
+    }
+
+    await api
+      .post('/api/blogs')
+      .send(blog)
+      .expect(400)
+})
+
 afterAll(async () => {
     await mongoose.connection.close()
 })
