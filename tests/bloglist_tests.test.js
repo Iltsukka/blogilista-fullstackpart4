@@ -99,6 +99,37 @@ test('if no url given, response is 400 Bad Request', async () => {
       .expect(400)
 })
 
+test('deleting a blog returns 204 and correct number of blogs', async () => {
+    const response = await api.get('/api/blogs')
+    const id = response.body[0].id
+    console.log(id)
+    await api
+      .delete(`/api/blogs/${id}`)
+      .expect(204)
+
+    response2 = await api.get('/api/blogs')
+    expect(response2.body.length).toBe(1)
+})
+
+test('updating blog works', async () => {
+    const blog = {title: 'Leijonakuningas', author: 'J.K.Rowling', url: 'www.Lions.com', likes: 55}
+    const response = await api.get('/api/blogs')
+    const id = response.body[0].id
+    await api
+      .put(`/api/blogs/${id}`)
+      .send(blog)
+    
+    const secondResponse = await api.get('/api/blogs')
+    const updatedBlog = secondResponse.body[0]
+
+    
+    expect(updatedBlog.title).toEqual('Leijonakuningas')
+    expect(updatedBlog.author).toEqual('J.K.Rowling')
+    expect(updatedBlog.url).toEqual('www.Lions.com')
+    expect(updatedBlog.likes).toEqual(55)
+    expect(secondResponse.body.length).toBe(2)
+})
+
 afterAll(async () => {
     await mongoose.connection.close()
 })
