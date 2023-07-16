@@ -4,6 +4,9 @@ const bcrypt = require('bcrypt')
 
 usersRouter.post('/', async (request, response) => {
     const {username, name, password} = request.body
+    if (password === undefined || password.length < 3) {
+        return response.status(400).json({error: 'Password cannot be empty, minimum 3 characters required.'})
+    }
     const saltRounds = 10
     const passwordHash = await bcrypt.hash(password, saltRounds)
     const user = new User({
