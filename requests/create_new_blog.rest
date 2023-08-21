@@ -1,9 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1diIInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IklsdHN1SCIsImlkIjoiNjRlMzVhMDdiNWU4Njc4MWQyYTljOGRmIiwiaWF0IjoxNjkyNjIyMjE0fQ.0dHBhSIVIkqA7DQ2e1hEllbxZCLT7Pg79AkK3xyjISs
 
 {
-    "title": "TightKnight",
-    "author": "Knightsofhollywood",
-    "url": "samueljackson.com",
-    "likes": 30
+    "title": "Pot",
+    "author": "Ilari",
+    "url": "Harrypot.com",
+    "likes": 12
 }
