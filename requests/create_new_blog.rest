@@ -2,7 +2,8 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "author": "Tiger",
-    "url": "el-tigre.com",
-    "likes": 2
+    "title": "TightKnight",
+    "author": "Knightsofhollywood",
+    "url": "samueljackson.com",
+    "likes": 30
 }
