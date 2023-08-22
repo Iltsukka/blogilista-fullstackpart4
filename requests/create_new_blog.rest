@@ -1,14 +1,5 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-<<<<<<< HEAD
-Authorization: Bearer eyJhbGciOiJIUzI1NsIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IklsMzEzIiwiaWQiOiI2NGUzNmM5YTMyNmFiNTNjZWIwOTA1ZWUiLCJpYXQiOjE2OTI2MjYxMDR9.yCgP5GhjvVAhYQZ3Ua1AQy9kSGRX9DJglIsGrtN68y8
-
-{
-    "title": "Pot",
-    "author": "jerry",
-    "url": "Harrypot.com",
-    "likes": 12
-=======
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkluZGlhbmEiLCJpZCI6IjY0ZTQ2ZTg4NDljODIyODU4ZjkxNGZiZSIsImlhdCI6MTY5MjY5MjEzMH0.cnfODMf6o1mdUlvFEKsk38uPACjGpFxTqf9z45FLy-c
 
 {
@@ -16,5 +7,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkluZ
     "author": "David",
     "url": "davyjones.com",
     "likes": 122321
->>>>>>> 9c83f538bc5c400491176dfc8d294df219cba377
 }
