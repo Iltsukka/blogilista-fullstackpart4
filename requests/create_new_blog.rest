@@ -1,10 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NsIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IklsMzEzIiwiaWQiOiI2NGUzNmM5YTMyNmFiNTNjZWIwOTA1ZWUiLCJpYXQiOjE2OTI2MjYxMDR9.yCgP5GhjvVAhYQZ3Ua1AQy9kSGRX9DJglIsGrtN68y8
 
 {
     "title": "Pot",
-    "author": "Ilari",
+    "author": "jerry",
     "url": "Harrypot.com",
     "likes": 12
 }
