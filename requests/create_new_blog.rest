@@ -1,10 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IktldHR1IiwiaWQiOiI2NGU0NWYyOTgzNTU3NGU0M2I5MzRkNTAiLCJpYXQiOjE2OTI2OTA0Mjl9.P3D97onDu9FI1itK8IpY751qLn0FkeFEA79W7VTuPj4
 
 {
-    "title": "Pot",
-    "author": "Ilari",
-    "url": "Harrypot.com",
-    "likes": 12
+    "title": "Kettumies iskee taas",
+    "author": "John",
+    "url": "horseswilding.com",
+    "likes": 1221
 }
